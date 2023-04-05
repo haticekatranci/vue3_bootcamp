@@ -13,6 +13,16 @@ const app = Vue.createApp({
 
         };
     },
+    methods : {
+        changeTitle(pTitle){
+            this.title= pTitle;
+        },
+        updateCoords(event){
+            console.log(event.x, event.y)
+
+        }
+
+    },
 }).mount("#app");
 
 

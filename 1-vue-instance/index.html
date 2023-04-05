@@ -5,6 +5,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="styele.css">
+
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
@@ -16,7 +18,11 @@
        v-bind:alt="eduflow.alt"
        v-bind:kablosuzkedi="owner"
 
-    >{{eduflow.title}}</a>
+    >{{eduflow.title}}</a><br><br>
+    <button v-on:click="changeTitle('bu 1. buton')">Title değiştir</button>
+    <button v-on:click="changeTitle('bu 2. buton')">Title 2değiştir</button>
+    <div class="box" @mousemove="updateCoords" @click="changeTitle('box üzerinden gelen')"></div>
+    <span>45,4</span>
 
 </div>
 <script src="app.js"></script>
