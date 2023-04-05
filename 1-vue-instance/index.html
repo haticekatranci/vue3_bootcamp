@@ -11,7 +11,12 @@
 <div id="app">
     <h1>{{ title }}</h1>
     <p>{{content}} </p>
-    <a v-bind:target="eduflow.target" v-bind:href="eduflow.url" v-bind:alt="eduflow.alt">{{eduflow.title}}</a>
+    <a v-bind:target="eduflow.target"
+       v-bind:href="eduflow.url"
+       v-bind:alt="eduflow.alt"
+       v-bind:kablosuzkedi="owner"
+
+    >{{eduflow.title}}</a>
 
 </div>
 <script src="app.js"></script>

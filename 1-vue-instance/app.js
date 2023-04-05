@@ -8,7 +8,8 @@ const app = Vue.createApp({
                 target : "_blank",
                 url : "https://eduflow.kablosuzkedi.com",
                 alt: "muf",
-            }
+            },
+            owner: "poğaça",
 
         };
     },
