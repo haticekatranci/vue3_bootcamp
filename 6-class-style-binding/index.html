@@ -11,12 +11,13 @@
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
-
 <div id="app">
-
-
+    <input type="text" v-model="bgColor" />
+    <button @click="showBorder = !showBorder">Border Ekle/Ekleme</button>
+    <button @click="redBG = !redBG">Kırmızı BG Yap.</button>
+    <div class="box" :class="boxClasses" :style="{ backgroundColor : bgColor }"
+    ></div>
 </div>
-
 
 <script src="app.js"></script>
 </body>
