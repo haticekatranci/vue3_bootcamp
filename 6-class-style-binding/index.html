@@ -12,10 +12,14 @@
 </head>
 <body>
 <div id="app">
-    {{ border }}
+    <input type="text" v-model="bgColor">{{ bgColor}}
     <button @click="showBorder = !showBorder">Border Ekle/Ekleme</button>
     <button @click="redBG = !redBG">Kırmızı BG Yap.</button>
-    <div class="box" :class="{ border : showBorder, red : redBG }"></div>
+    <div
+        class="box"
+        :class="boxClasses"
+        :style="{ backgroundColor: bgColor }"
+    ></div>
 </div>
 
 <script src="app.js"></script>
