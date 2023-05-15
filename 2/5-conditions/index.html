@@ -10,10 +10,21 @@
   </head>
   <body>
     <div id="app">
-      <div class="container">
-        <button>Göster / Gizle</button>
-        <h3>Gösterilecek BAşlık...</h3>
-       
+      <div class="container text-center">
+        <h3 v-if="showState == true" class="text-green">Gösterilecek Başlık...</h3>
+        <h3 v-else class="text-red">Gizlenen Başlık...</h3>
+        <button @click="showState = !showState" >Göster / Gizle</button>
+      </div>
+
+      <div class="container text-center">
+        {{ counter }}
+
+        <h3 v-if="counter < 0" class="text-red">Negatif</h3>
+        <h3 v-else-if="counter > 0" class="text-green">Pozitif</h3>
+        <h3 v-else class="text-default">Sıfır</h3>
+
+        <button @click="counter++">Arttır</button>
+        <button @click="counter--">Azalt</button>
 
       </div>
       
